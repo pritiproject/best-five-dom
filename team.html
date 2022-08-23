@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build Your Fantasy Team</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body>
+    <!-- article part -->
+    <header class="hero-section flex flex-col justify-center bg-zinc-900 h-96">
+      <div class="w-2/3 mx-auto text-center">
+        <h1 class="text-orange-600 text-5xl font-black mb-7">
+          Build Your Fantasy Team
+        </h1>
+        <p class="w-1/2 mx-auto text-gray-300 leading-6">
+          Create a team and select your starting XI and reserves. Keep tabs on
+          how you are performing through live scoring. After every round you
+          will have a window of time to update your team through a set number of
+          trades and subbing in your reserves.
+        </p>
+      </div>
+    </header>
+    <!-- article part ends-->
+    <main class="bg-zinc-800 pb-5">
+      <div class="container pt-20 w-3/4 mx-auto flex">
+        <!-- players' section begins -->`
+        <section class="players-section">
+          <div class="grid grid-cols-4 gap-4">
+            <!-- player 1-->
+            <div>
+              <img class="h-8 w-full" src="assets/afif.jpg" alt="" />
+              <div
+                class="player-info mx-auto flex flex-col items-center bg-zinc-900 text-white"
+              >
+                <h3 class="mt-4 mb-3 text-2xl font-bold">Afif Hossain</h3>
+                <button
+                  id="player-one-btn"
+                  value="Afif Hossain"
+                  class="select-btn bg-blue-800 w-3/4 p-2 mb-5"
+                >
+                  SELECT
+                </button>
+              </div>
+            </div>
+            <!-- player 2 -->
+            <div>
+              <img class="h-1/2 w-full" src="assets/bijoy.jpg" alt="" />
+              <div
+                class="player-info mx-auto flex flex-col items-center bg-zinc-900 text-white"
+              >
+                <h3 class="mt-4 mb-3 text-2xl font-bold">Anamul Haque</h3>
+                <button
+                  id="player-two-btn"
+                  value="Anamul Haque"
+                  class="select-btn bg-blue-800 w-3/4 p-2 mb-5"
+                >
+                  SELECT
+                </button>
+              </div>
+            </div>
+            <!-- player 3 -->
+            <div>
+              <img class="h-1/2 w-full" src="assets/will.jpg" alt="" />
+              <div
+                class="player-info mx-auto flex flex-col items-center bg-zinc-900 text-white"
+              >
+                <h3 class="mt-4 mb-3 text-2xl font-bold">Will Jacks</h3>
+                <button
+                  id="player-three-btn"
+                  value="Will Jacks"
+                  class="select-btn bg-blue-800 w-3/4 p-2 mb-5"
+                >
+                  SELECT
+                </button>
+              </div>
+            </div>
+            <!-- selection panel -->
+            <div class="bg-zinc-900 h-3/4">
+              <h3 class="text-2xl text-white underline mb-10 mt-5 text-center">
+                Selected-V
+              </h3>
+              <ul
+                id="player-list"
+                class="text-gray-300 text-lg ml-8 space-y-5"
+              ></ul>
+            </div>
+            <!-- player 4 -->
+            <div>
+              <img class="h-1/2 w-full" src="assets/taskin.jpg" alt="" />
+              <div
+                class="player-info mx-auto flex flex-col items-center bg-zinc-900 text-white"
+              >
+                <h3 class="mt-4 mb-3 text-2xl font-bold">Taskin Ahmed</h3>
+                <button
+                  id="player-four-btn"
+                  value="Taskin Ahmed"
+                  class="select-btn bg-blue-800 w-3/4 p-2 mb-5"
+                >
+                  SELECT
+                </button>
+              </div>
+            </div>
+            <!-- player 5 -->
+            <div>
+              <img class="h-1/2 w-full" src="assets/shahin.jpg" alt="" />
+              <div
+                class="player-info mx-auto flex flex-col items-center bg-zinc-900 text-white"
+              >
+                <h3 class="mt-4 mb-3 text-2xl font-bold">Shahin Shah</h3>
+                <button
+                  id="player-five-btn"
+                  value="Shahin Shah"
+                  class="select-btn bg-blue-800 w-3/4 p-2 mb-5"
+                >
+                  SELECT
+                </button>
+              </div>
+            </div>
+            <!-- player 6 -->
+            <div>
+              <img class="h-1/2 w-full" src="assets/starc.jpg" alt="" />
+              <div
+                class="player-info mx-auto flex flex-col items-center bg-zinc-900 text-white"
+              >
+                <h3 class="mt-4 mb-3 text-2xl font-bold">Mitchel Starc</h3>
+                <button
+                  id="player-six-btn"
+                  value="Mitchel Starc"
+                  class="select-btn bg-blue-800 w-3/4 p-2 mb-5"
+                >
+                  SELECT
+                </button>
+              </div>
+            </div>
+            <!-- cost caculation-->
+            <div class="bg-zinc-900">
+              <div class="container w-3/4 mx-auto">
+                <h3 class="text-2xl text-white text-center mt-5 mb-7">
+                  Budget
+                </h3>
+                <!-- total player cost -->
+                <div>
+                  <!-- player input -->
+                  <div class="flex justify-around">
+                    <p class="text-gray-300 inline">Per Player</p>
+                    <input
+                      id="player-cost"
+                      class="bg-zinc-900 text-white w-1/2 border"
+                      type="text"
+                    />
+                  </div>
+                  <button
+                    id="calculate-btn"
+                    class="bg-blue-800 text-white w-full p-2 mt-5"
+                  >
+                    Calculate
+                  </button>
+                  <!-- player expense total -->
+                  <div class="mt-5 text-gray-300 flex justify-around">
+                    <p>Player Expenses</p>
+                    <p id="player-ex" class="hidden">
+                      $<span id="player-expense"></span>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- manager input -->
+                <div class="flex justify-between mt-5">
+                  <p class="text-gray-300 inline">Manager</p>
+                  <input
+                    id="manager-cost"
+                    class="bg-zinc-900 text-white w-1/2 border"
+                    type="text"
+                  />
+                </div>
+
+                <!-- coach input -->
+                <div class="flex justify-between mt-2">
+                  <p class="text-gray-300 inline">Coach</p>
+                  <input
+                    id="coach-cost"
+                    class="bg-zinc-900 text-white w-1/2 border"
+                    type="text"
+                  />
+                </div>
+
+                <!-- total calculation -->
+                <div>
+                  <button
+                    id="calculate-total-btn"
+                    class="bg-blue-800 text-white w-full p-2 mt-5"
+                  >
+                    Calculate Total
+                  </button>
+                  <!-- player expense total -->
+                  <div class="mt-5 mb-5 text-gray-300 flex justify-around">
+                    <p>Total</p>
+                    <p id="total-ex" class="hidden text-orange-600">
+                      $<span id="total-expense"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- players' section ends -->
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div
+        class="container flex justify-center items-center border-t-2 border-gray-500 h-28 bg-zinc-800"
+      >
+        <p class="text-gray-300">Copyright @ 2022 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="JS/app.js"></script>
+  </body>
+</html>
